@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PhotoManagement">
+  <ClassDiagramComponents>
+    <Class name="Album" package="photomanagementapplication" visibility="public" xPosition="5.0" yPosition="-2.0">
+      <Fields>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="manager" type="PhotoManager" visibility="package"/>
+        <Field name="tags" type="LinkedList&lt;String&gt;" visibility="package"/>
+        <Field name="photos" type="LinkedList&lt;Photo&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="condition"/>
+          <Argument type="PhotoManager" name="manager"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getCondition" returnType="String" visibility="public"/>
+        <Method name="getManager" returnType="PhotoManager" visibility="public"/>
+        <Method name="getPhotos" returnType="LinkedList&lt;Photo&gt;" visibility="public"/>
+        <Method name="getNbComps" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BSTNode" package="photomanagementapplication" visibility="public" xPosition="21.0" yPosition="287.0">
+      <Fields>
+        <Field name="key" type="String" visibility="public"/>
+        <Field name="data" type="LinkedList&lt;String&gt;" visibility="public"/>
+        <Field name="left" type="BSTNode&lt;T&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="key"/>
+          <Argument type="LinkedList&lt;String&gt;" name="data"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="BST" package="photomanagementapplication" visibility="public" xPosition="396.0" yPosition="246.0">
+      <Fields>
+        <Field name="deleteData" type="String" visibility="private"/>
+        <Field name="root" type="BSTNode&lt;T&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="clear" returnType="void" visibility="public"/>
+        <Method name="empty" returnType="boolean" visibility="public"/>
+        <Method name="full" returnType="boolean" visibility="public"/>
+        <Method name="retrieve" returnType="LinkedList&lt;String&gt;" visibility="public"/>
+        <Method name="findKey" returnType="boolean" visibility="public">
+          <Argument type="String" name="k"/>
+        </Method>
+        <Method name="findKeyAndInsertData" returnType="void" visibility="public">
+          <Argument type="String" name="k"/>
+          <Argument type="String" name="val"/>
+        </Method>
+        <Method name="findAndReturnData" returnType="LinkedList&lt;String&gt;" visibility="public">
+          <Argument type="String" name="k"/>
+        </Method>
+        <Method name="insert" returnType="boolean" visibility="public">
+          <Argument type="String" name="k"/>
+          <Argument type="LinkedList&lt;String&gt;" name="val"/>
+        </Method>
+        <Method name="removeKey" returnType="boolean" visibility="public">
+          <Argument type="String" name="k"/>
+        </Method>
+        <Method name="deleteFromBST" returnType="void" visibility="public">
+          <Argument type="String" name="str"/>
+        </Method>
+        <Method name="inOrder" returnType="void" visibility="private">
+          <Argument type="BSTNode" name="node"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Node" package="photomanagementapplication" visibility="public" xPosition="759.0" yPosition="261.0">
+      <Fields>
+        <Field name="data" type="T" visibility="public"/>
+        <Field name="next" type="Node&lt;T&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="T" name="val"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="LinkedList" package="photomanagementapplication" visibility="public" xPosition="1073.0" yPosition="204.0">
+      <Fields>
+        <Field name="head" type="Node&lt;T&gt;" visibility="private"/>
+        <Field name="current" type="Node&lt;T&gt;" visibility="private"/>
+        <Field name="size" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getSize" returnType="int" visibility="public"/>
+        <Method name="getHead" returnType="Node&lt;T&gt;" visibility="public"/>
+        <Method name="setCurrent" returnType="void" visibility="public">
+          <Argument type="Node&lt;T&gt;" name="cur"/>
+        </Method>
+        <Method name="getCurrent" returnType="Node&lt;T&gt;" visibility="public"/>
+        <Method name="empty" returnType="boolean" visibility="public"/>
+        <Method name="last" returnType="boolean" visibility="public"/>
+        <Method name="full" returnType="boolean" visibility="public"/>
+        <Method name="findFirst" returnType="void" visibility="public"/>
+        <Method name="findNext" returnType="void" visibility="public"/>
+        <Method name="retrieve" returnType="T" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="T" name="val"/>
+        </Method>
+        <Method name="insert" returnType="void" visibility="public">
+          <Argument type="T" name="val"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public"/>
+        <Method name="deleteNode" returnType="void" visibility="package">
+          <Argument type="T" name="key"/>
+        </Method>
+        <Method name="search" returnType="boolean" visibility="public">
+          <Argument type="T" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Photo" package="photomanagementapplication" visibility="public" xPosition="563.0" yPosition="8.0">
+      <Fields>
+        <Field name="path" type="String" visibility="private"/>
+        <Field name="tags" type="LinkedList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="path"/>
+          <Argument type="LinkedList&lt;String&gt;" name="tags"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPath" returnType="String" visibility="public"/>
+        <Method name="getTags" returnType="LinkedList&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PhotoManagementApplication" package="photomanagementapplication" visibility="public" xPosition="58.0" yPosition="446.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="clearConsole" returnType="void" visibility="public" isStatic="true" isFinal="true"/>
+      </Methods>
+    </Class>
+    <Class name="PhotoManager" package="photomanagementapplication" visibility="public" xPosition="1051.0" yPosition="3.0">
+      <Fields>
+        <Field name="photos" type="LinkedList&lt;Photo&gt;" visibility="package"/>
+        <Field name="bst" type="BST&lt;LinkedList&lt;Photo&gt;&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addPhoto" returnType="void" visibility="public">
+          <Argument type="Photo" name="p"/>
+        </Method>
+        <Method name="deletePhoto" returnType="void" visibility="public">
+          <Argument type="String" name="photo"/>
+        </Method>
+        <Method name="getPhotos" returnType="BST&lt;LinkedList&lt;Photo&gt;&gt;" visibility="public"/>
+        <Method name="getAllPhotos" returnType="LinkedList&lt;Photo&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="photos" source="photomanagementapplication.PhotoManager" target="photomanagementapplication.Photo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="LinkedList&lt;Photo&gt;"/>
+    <HasRelation name="manager" source="photomanagementapplication.Album" target="photomanagementapplication.PhotoManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="photos" source="photomanagementapplication.Album" target="photomanagementapplication.Photo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="LinkedList&lt;Photo&gt;"/>
+    <HasRelation name="bst" source="photomanagementapplication.PhotoManager" target="photomanagementapplication.Photo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="BST&lt;LinkedList&lt;Photo&gt;&gt;"/>
+    <UseRelation source="photomanagementapplication.LinkedList" target="photomanagementapplication.Node" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="photomanagementapplication.Photo" target="photomanagementapplication.LinkedList" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="photomanagementapplication.BST" target="photomanagementapplication.Node" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="photomanagementapplication.PhotoManager" target="photomanagementapplication.Photo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="photomanagementapplication.Album" target="photomanagementapplication.Photo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="photomanagementapplication.Album" target="photomanagementapplication.PhotoManager" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="photomanagementapplication.BST" target="photomanagementapplication.LinkedList" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

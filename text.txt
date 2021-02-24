@@ -1,0 +1,7 @@
+BURHAN	animal
+USMAN	animal
+FURQAN	apple
+SAAD	grass
+HAMZA	green
+AOWN	animal AND bear
+HAMMAD	animal AND butterfly
